@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Tools</title>
+
+    <script src="https:/code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./pixel_icon.webp" type="image/png+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+ </head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->  <header class="header" data-header>
+    <div class="header-full">
+      <a href="#" class="logo">
+        <img src="pixel_icon.webp" width="30" height="30" alt="pixel logo">  Pixels Tools
+      </a>
+<center>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+         
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Lands</a>
+          </li>
+		    <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Resources</a>
+          </li>
+                    <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Sell Crypto</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+          
+        </ul></center>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+	   <a href="" >  <img src="./images/hero-banner.png" width="50" height="50"  ></a>
+
+
+
+  </header>
+
+  <!-- Aquí va el contenido de tu página -->
+
+</body>
+</html>
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+<section class="section hero" aria-label="hero" data-section>
+  <div class="container">
+    <div class="hero-content">
+      <h3 class="h3 hero-title">Welcome to Pixels Tools</h3>
+      <p class="hero-text">
+       Pixels Tools is a tool that will make your favorite game easier for you
+  </p>
+    
+    </div>
+	
+      <!-- Agregar imágenes de escritorio detrás del texto -->
+      <img src="./images/axie_infinity.webp" alt="imagen1" class="hero-img img1">
+      <img src="./images/SLP.webp" alt="imagen2" class="hero-img img2">
+      <img src="./images/glass-3.png" alt="imagen3" class="hero-img img3">
+      <img src="./images/pixel.webp" alt="imagen4" class="hero-img img4">
+    
+    <!-- Mostrar el banner hero solo en dispositivos de escritorio -->
+    <figure class="hero-banner">
+      <img src="./images/hero-banner.png" width="570" height="448" alt="hero banner" class="w-100">
+    </figure>
+
+    <!-- Agregar imágenes móviles -->
+    <img src="./images/axie_infinity.webp" alt="mobile-image1" class="img-mobile img1-mobile">
+    <img src="./images/SLP.webp" alt="mobile-image2" class="img-mobile img3-mobile">
+    <img src="./images/glass-3.png" alt="mobile-image3" class="img-mobile img2-mobile">
+    <img src="./images/pixel.webp" alt="mobile-image4" class="img-mobile img4-mobile">
+  </div>
+</section>
+
+</body>
+</html>
+
+
+
+
+
+      <!-- 
+        - #TREND
+      -->
+  <style>
+        .green { color: green; }
+        .red { color: red; }
+    </style>
+      <section class="section trend" aria-label="crypto trend" data-section>
+        <div class="container">
+
+          <div class="trend-tab">
+
+    <ul class="tab-content">
+	
+        <li>
+            <div class="trend-card">
+                <div class="card-title-wrapper">
+                    <img src="./images/ronin.webp" width="24" height="24" alt="ronin logo">
+                    <a href="https:/www.coingecko.com/es/monedas/ronin" class="card-title">Ronin <span class="span">RON/USD</span></a>
+                </div>
+                <data class="card-value"><h1><span id="ronin">Loading..</span></h1></data>
+                <p class="percentage-change"><span id="ronin-change"></span></p>
+            </div>
+        </li>
+		 <li>
+            <div class="trend-card">
+                <div class="card-title-wrapper">
+                    <img src="./images/pixel.webp" width="24" height="24" alt="pixel logo">
+                    <a href="https:/www.coingecko.com/es/monedas/pixels" class="card-title">Pixels <span class="span">PIXEL/USD</span></a>
+                </div>
+                <data class="card-value"><h1><span id="pixel">Loading..</span></h1></data>
+                <p class="percentage-change"><span id="pixel-change"></span></p>
+            </div>
+        </li>
+
+	   <li>
+            <div class="trend-card">
+                <div class="card-title-wrapper">
+                    <img src="./images/axie_infinity.webp" width="24" height="24" alt="axie_infinity logo">
+                    <a href="https:/www.coingecko.com/es/monedas/axie-infinity" class="card-title">Axie Infinity <span class="span">AXS/USD</span></a>
+                </div>
+                <data class="card-value"><h1><span id="axs">Loading..</span></h1></data>
+                <p class="percentage-change"><span id="axs-change"></span></p>
+            </div>
+        </li>
+        <li>
+            <div class="trend-card">
+                <div class="card-title-wrapper">
+                    <img src="./images/SLP.webp" width="24" height="24" alt="slp logo">
+                    <a href="https:/www.coingecko.com/es/monedas/smooth-love-potion" class="card-title">Smooth Love Potion <span class="span">SLP/USD</span></a>
+                </div>
+                <data class="card-value"><h1><span id="slp">Loading..</span></h1></data>
+                <p class="percentage-change"><span id="slp-change"></span></p>
+            </div>
+        </li>
+             
+    </ul>
+ 
+</body>
+</html>
+ </div> </div> </div>
+
+
+      <!-- 
+        - #MARKET
+      -->
+
+    
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="false" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="false" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  
+             
+
+                 
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+    
+                  <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+					
+					  <br>
+
+
+
+
+<br>
+    <style>
+        .table-container {
+            max-width: 92%;
+            background-color: hsl(228, 9%, 10%);
+            padding: 20px;
+            border: 1px solid var(--raisin-black);
+            border-radius: 24px;
+            overflow-x: auto;
+            margin: 0 auto; /* Centrar la tabla */
+        }
+
+     
+    </style>
+    <div class="table-container">
+         <h2><img src="assets/images/skill/skills_icon_farming.png" alt="Farming Icon">Farming</h2>
+        <table>
+            <thead>
+                <tr>
+                     <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                       <td><div class="item"><img src="assets/images/skill/farming/Scarrot.png" alt="Scarrot">Scarrot</td>
+                      <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">100</td>
+                    <td>-</td>
+					<td>65</td>
+					<td>-</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Napricot.png" alt="Napricot">Napricot</td>
+                      <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">40</td>
+                    <td>-</td>
+					 <td>50</td>
+					  <td>-</td>
+                </tr>
+				  <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Butterberry.png" alt="Napricot">Butterberry</td>
+                      <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">20</td>
+                    <td>87</td>
+					 <td>87</td>
+					  <td>-</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Scarrot.png" alt="Scarrot">Scarrot</td>
+                     <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">20</td>
+                    <td>64</td>
+					  <td>64</td>
+					    <td>64</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Cubecumber.png" alt="Cubecumber">Cubecumber</td>
+                     <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">8</td>
+                    <td>54</td>
+					    <td>30</td>
+						    <td>54</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Slothmato.png" alt="Slothmato">Slothmato</td>
+                     <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">8</td>
+                    <td>49</td>
+					    <td>30</td>
+						    <td>50</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Napricot.png" alt="Napricot">Napricot</td>
+                     <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">8</td>
+                    <td>44</td>
+					   <td>30</td>
+					      <td>44</td>
+					
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/farming/Java Bean.png" alt="Java Bean">Java Bean</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">3</td>
+                    <td>30</td>
+					 <td>30</td>
+					  <td>33</td>
+                </tr>
+                <tr>
+                   <td><div class="item"><img src="assets/images/skill/farming/Muckchuck.png" alt="Muckchuck">Muckchuck</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">3</td>
+                    <td>6</td>
+					   <td>30</td>
+					      <td>33</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ <br>
+    <div class="table-container">
+        <h2><img src="assets/images/skill/skills_icon_cooking.png" alt="Cooking Icon">Cooking</h2>
+        <table id="cooking-table">
+            <thead>
+                <tr>
+                      <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Butterberry Jam.png" alt="Butterberry Jam">Butterberry Jam</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">100</td>
+                    <td>-</td>
+					 <td>70</td>
+					  <td>-</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Cubecumber Loaf.png" alt="Cubecumber Loaf">Cubecumber Loaf</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">40</td>
+                    <td>-</td>
+					   <td>64</td>
+					      <td>-</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Butterberry Pie.png" alt="Butterberry Pie">Butterberry Pie</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">20</td>
+                    <td>69</td>
+					  <td>69</td>
+					    <td>69</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Butterberry Jam.png" alt="Butterberry Jam">Butterberry Jam</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">20</td>
+                    <td>66</td>
+					<td>66</td>
+					<td>67</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Scarrot Pie.png" alt="Scarrot Pie">Scarrot Pie</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">16</td>
+                    <td>69</td>
+					  <td>69</td>
+					    <td>69</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Scarrot Loaf.png" alt="Scarrot Loaf">Scarrot Loaf</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">16</td>
+                    <td>66</td>
+					<td>66</td>
+					<td>67</td>
+                </tr>
+                <tr>
+                    <td><div class="item"><img src="assets/images/skill/cooking/Slice of Scarrot Cake.png" alt="Slice of Scarrot Cake">Slice of Scarrot Cake</div></td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels">16</td>
+                    <td>64</td>
+					 <td>64</td>
+					  <td>67</td>
+                </tr>
+                 <tr>
+                <td><div class="item"><img src="assets/images/skill/cooking/Scarrot Puree.png" alt="Scarrot Puree"> Scarrot Puree</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 8</td>
+                <td>61</td>
+				<td>61</td>
+				<td>61</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/cooking/Cubecumber Loaf.png" alt="Cubecumber Loaf"> Cubecumber Loaf</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 8</td>
+                <td>59</td>
+				   <td>59</td>
+				      <td>59</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/cooking/Cubecumber Relish.png" alt="Cubecumber Relish"> Cubecumber Relish</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>56</td>
+				 <td>56</td>
+				  <td>56</td>
+            </tr>
+            <tr>
+              <td><div class="item"><img src="assets/images/skill/cooking/Slice of Slothmato Pizza.png" alt="Slice of Slothto Pizza"> Slice of Slothmato Pizza</td>
+             <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>54</td>
+				   <td>54</td>  
+				      <td>54</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/cooking/Slothmato Paste.png" alt="Slothto Paste"> Slothmato Paste
+</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>51</td>
+				<td>51</td>
+				<td>51</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/cooking/Napricot Pie
+.png" alt="Napricot Pie"> Napricot Pie</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>49</td>
+				  <td>49</td>
+				  	<td>51</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/cooking/Napricot Jam
+.png" alt="Napricot Jam"> Napricot Jam</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>46</td>
+				 <td>46</td>
+				 	<td>51</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/cooking/Muckchuck Pie
+.png" alt="Muckchuck Pie"> Muckchuck Pie</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>44</td>
+				 <td>44</td>
+				  <td>44</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/cooking/Muckchuck Jam
+.png" alt="Muckchuck Jam"> Muckchuck Jam</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 3</td>
+                <td>41</td>
+				 <td>41</td>
+				 <td>44</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/cooking/Coffee Fruit Pie
+.png" alt="Coffee Fruit Pie"> Coffee Fruit Pie</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 3</td>
+            <td>39</td>
+			 <td>40</td>
+			  <td>44</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+  <br>
+  <div class="table-container">
+         <h2><img src="assets/images/skill/skills_icon_mining.png" alt="Farming Icon">Mining</h2>
+        <table>
+            <thead>
+                <tr>
+                       <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Mining/Adamaxium Ore.png" alt="Adamaxium Ore" class="item-icon"> Adamaxium Ore</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 100</td>
+                <td>-</td>
+				 <td>75</td>
+				  <td>-</td>
+            </tr>
+            <tr>
+                   <td><div class="item"><img src="assets/images/skill/Mining/Bedrock Matrix.png" alt="Bedrock Matrix" class="item-icon"> Bedrock Matrix</td>
+                   <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 30</td>
+                <td>-</td>
+				<td>56</td>
+				<td>-</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Mining/Adamaxium Ore.png" alt="Adamaxium Ore" class="item-icon"> Adamaxium Ore</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 20</td>
+                <td>70</td>
+				  <td>70</td>
+				    <td>70</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Mining/Claricite Matrix.png" alt="Claricite Matrix" class="item-icon"> Claricite Matrix</td>
+                   <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 20</td>
+                <td>70</td>
+				  <td>70</td>
+				    <td>70</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Mining/Irontite Ore.png" alt="Irontite Ore" class="item-icon"> Irontite Ore</td>
+                   <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 8</td>
+            <td>50</td>
+				  <td>30</td>
+				    <td>50</td>
+            </tr>
+            <tr>
+                   <td><div class="item"><img src="assets/images/skill/Mining/Bedrock Matrix.png" alt="Bedrock Matrix" class="item-icon"> Bedrock Matrix</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels" class="gem-icon"> 6</td>
+                <td>50</td>
+				  <td>30</td>
+				    <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+ <br>
+ 
+       <div class="table-container">
+         <h2><img src="assets/images/skill/skills_icon_stoneshaping.png" alt="Farming Icon">Stoneshaping</h2>
+        <table>
+            <thead>
+                <tr>
+                     <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Stoneshaping/Claricite Powder.png" alt="Claricite Powder" class="item-icon"> Claricite Powder</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 100</td>
+                <td>-</td>
+				   <td>70</td>
+				      <td>-</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Stoneshaping/Bedrock Powder.png" alt="Bedrock Powder" class="item-icon"> Bedrock Powder</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 40</td>
+                <td>-</td>
+				   <td>53</td>
+				      <td>-</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Stoneshaping/Claricite Brick.png" alt="Claricite Brick" class="item-icon"> Claricite Brick</td>
+                  <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 20</td>
+                <td>64</td>
+				 <td>64</td>
+				  <td>65</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Stoneshaping/Claricite Powder.png" alt="Claricite Powder" class="item-icon"> Claricite Powder</td>
+                  <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 20</td>
+                 <td>64</td>
+				 <td>64</td>
+				  <td>65</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Stoneshaping/Bedrock Powder.png" alt="Bedrock Powder" class="item-icon"> Bedrock Powder</td>
+                 <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 8</td>
+                <td>30</td>
+				<td>44</td>
+				<td>44</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Stoneshaping/Bedrock Brick.png" alt="Bedrock Brick" class="item-icon"> Bedrock Brick</td>
+                  <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>44</td>
+				<td>30</td>
+				<td>44</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+</div>
+ 
+  <br>
+ <div class="table-container">
+ <h2><img src="assets/images/skill/skills_icon_metalworking.png" alt="Farming Icon">Metalworking</h2>
+    <table>
+        <thead>
+            <tr>
+               <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Metalworking/Adamaxium Bar.png" alt="Adamaxium Bar" width="24">Adamaxium Bar</td>
+                   <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 100</td>
+                <td>-</td>
+				  <td>69</td>
+				    <td>-</td>
+            </tr>
+            <tr>
+              <td><div class="item"><img src="assets/images/skill/Metalworking/Ironite Bar.png" alt="Ironite Bar" width="24">Ironite Bar</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 40</td>
+                <td>-</td>
+				  <td>49</td>
+				    <td>-</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Metalworking/Adamaxium Bar.png" alt="Adamaxium Bar" width="24">Adamaxium Bar</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 20</td>
+                <td>64</td>
+				  <td>64</td>
+				    <td>64</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Metalworking/Ironite Bar.png" alt="Ironite Bar" width="24">Ironite Bar</td>
+                    <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 8</td>
+                <td>44</td>
+				   <td>44</td>
+				      <td>44</td>
+            </tr>
+            <tr>
+                <td><div class="item"><img src="assets/images/skill/Metalworking/Bronzenite Bar.png" alt="Bronzenite Bar" width="24">Bronzenite Bar</td>
+                     <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 3</td>
+                <td>24</td>
+				 <td>24</td>
+				  <td>30</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+ <div class="table-container">
+ <h2><img src="assets/images/skill/skills_icon_forestry.png" alt="Farming Icon">Foresty</h2>
+    <table>
+        <thead>
+            <tr>
+                  <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Foresty/Borebranch Log.png" alt="Borebranch Log"> Borebranch Log</td>
+              <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 100</td>
+                <td>-</td>
+				 <td>75</td>
+				  <td>-</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Foresty/Sawstump Log.png" alt="Sawstump Log"> Sawstump Log</td>
+               <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 30</td>
+                <td>-</td>
+				   <td>55</td>
+				      <td>-</td>
+            </tr>
+            <tr>
+                   <td><div class="item"><img src="assets/images/skill/Foresty/Borebranch Log.png" alt="Borebranch Log"> Borebranch Log</td>
+              <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 20</td>
+                <td>70</td>
+				 <td>70</td>
+				  <td>70</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Foresty/Sawstump Log.png" alt="Sawstump Log"> Sawstump Log</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 6</td>
+                <td>50</td>
+				  <td>30</td>
+				    <td>50</td>
+            </tr>
+            <tr>
+                   <td><div class="item"> <img src="assets/images/skill/Foresty/Borebranch Log.png" alt="Borebranch Log"> Borebranch Log</td>
+               <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 3</td>
+                <td>70</td>
+				<td>70</td>
+				<td>70</td>
+            </tr>
+            <tr>
+               <td><div class="item"><img src="assets/images/skill/Foresty/Craftbark Log.png" alt="Craftbark Log"> Craftbark Log</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixels"> 3</td>
+                <td>30</td>
+				  <td>20</td>
+				    <td>32</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+</div>
+<br>
+ <div class="table-container">
+ <h2><img src="assets/images/skill/skills_icon_woodwork.png" alt="Farming Icon">Woodworking</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Pixels</th>
+                <th>Basic</th>
+                <th><img src="assets/images/skill/vip.png" alt="Vip"></th>
+                <th><img src="assets/images/skill/land-grass.webp" alt="Land" width="25" height="25"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Woodworking/Borebranch Plank.png" alt="Borebranch Plank"> Borebranch Plank</td>
+              <td class="pixels"><img src="pixel_icon.webp" alt="Pixel Icon"> 100</td>
+                <td>-</td>
+                <td>70</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                  <td><div class="item"><img src="assets/images/skill/Woodworking/Sawstump Plank.png" alt="Sawstump Plank"> Sawstump Plank</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixel Icon"> 40</td>
+                <td>49</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Woodworking/Borebranch Plank.png" alt="Borebranch Plank"> Borebranch Plank</td>
+                <td class="pixels"><img src="pixel_icon.webp" alt="Pixel Icon"> 20</td>
+                <td>64</td>
+                <td>64</td>
+                <td>64</td>
+            </tr>
+            <tr>
+                 <td><div class="item"><img src="assets/images/skill/Woodworking/Sawstump Plank.png" alt="Sawstump Plank"> Sawstump Plank</td>
+               <td class="pixels"><img src="pixel_icon.webp" alt="Pixel Icon"> 8</td>
+                <td>44</td>
+                <td>44</td>
+                <td>44</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+</div>
+<br>
+      <!-- 
+        - #INSTRUCTION
+      -->
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Pixel Tools All Rights Reserved by <a href="#" class="copyright-link">Karmar14.ron</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+  
+ </div> </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  --> <script src="./js/scripts.js"></script>
+  <script src="./js/script.js" ></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  
+</body>
+
+</html>
