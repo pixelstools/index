@@ -117,64 +117,88 @@
       <!-- 
         - #TREND
       -->
-  <style>
-  
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Prices</title>
+    <style>
         .green { color: green; }
         .red { color: red; }
     </style>
-      <section class="section trend" aria-label="crypto trend" data-section>
+</head>
+<body>
+    <section class="section trend" aria-label="crypto trend" data-section>
         <div class="container">
+            <div class="trend-tab">
+                <ul class="tab-content">
+                    <li>
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <img src="./images/ronin.webp" width="24" height="24" alt="ronin logo">
+                                <a href="https://www.coingecko.com/es/monedas/ronin" class="card-title">Ronin <span class="span">RON/USD</span></a>
+                            </div>
+                            <data class="card-value"><h1><span id="ronin">Loading...</span></h1></data>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <img src="./images/pixel.webp" width="24" height="24" alt="pixel logo">
+                                <a href="https://www.coingecko.com/es/monedas/pixels" class="card-title">Pixels <span class="span">PIXEL/USD</span></a>
+                            </div>
+                            <data class="card-value"><h1><span id="pixel">Loading...</span></h1></data>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <img src="./images/axie_infinity.webp" width="24" height="24" alt="axie_infinity logo">
+                                <a href="https://www.coingecko.com/es/monedas/axie-infinity" class="card-title">Axie Infinity <span class="span">AXS/USD</span></a>
+                            </div>
+                            <data class="card-value"><h1><span id="axs">Loading...</span></h1></data>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="trend-card">
+                            <div class="card-title-wrapper">
+                                <img src="./images/SLP.webp" width="24" height="24" alt="slp logo">
+                                <a href="https://www.coingecko.com/es/monedas/smooth-love-potion" class="card-title">Smooth Love Potion <span class="span">SLP/USD</span></a>
+                            </div>
+                            <data class="card-value"><h1><span id="slp">Loading...</span></h1></data>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-          <div class="trend-tab">
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const pricesUrl = "https://api.coingecko.com/api/v3/simple/price?ids=axie-infinity,smooth-love-potion,pixels,ronin&vs_currencies=usd";
+            try {
+                const response = await fetch(pricesUrl);
+                const data = await response.json();
 
-    <ul class="tab-content">
-	
-        <li>
-            <div class="trend-card">
-                <div class="card-title-wrapper">
-                    <img src="./images/ronin.webp" width="24" height="24" alt="ronin logo">
-                    <a href="https:/www.coingecko.com/es/monedas/ronin" class="card-title">Ronin <span class="span">RON/USD</span></a>
-                </div>
-                <data class="card-value"><h1><span id="ronin">Loading..</span></h1></data>
-                <p class="percentage-change"><span id="ronin-change"></span></p>
-            </div>
-        </li>
-		 <li>
-            <div class="trend-card">
-                <div class="card-title-wrapper">
-                    <img src="./images/pixel.webp" width="24" height="24" alt="pixel logo">
-                    <a href="https:/www.coingecko.com/es/monedas/pixels" class="card-title">Pixels <span class="span">PIXEL/USD</span></a>
-                </div>
-                <data class="card-value"><h1><span id="pixel">Loading..</span></h1></data>
-                <p class="percentage-change"><span id="pixel-change"></span></p>
-            </div>
-        </li>
-
-	   <li>
-            <div class="trend-card">
-                <div class="card-title-wrapper">
-                    <img src="./images/axie_infinity.webp" width="24" height="24" alt="axie_infinity logo">
-                    <a href="https:/www.coingecko.com/es/monedas/axie-infinity" class="card-title">Axie Infinity <span class="span">AXS/USD</span></a>
-                </div>
-                <data class="card-value"><h1><span id="axs">Loading..</span></h1></data>
-                <p class="percentage-change"><span id="axs-change"></span></p>
-            </div>
-        </li>
-        <li>
-            <div class="trend-card">
-                <div class="card-title-wrapper">
-                    <img src="./images/SLP.webp" width="24" height="24" alt="slp logo">
-                    <a href="https:/www.coingecko.com/es/monedas/smooth-love-potion" class="card-title">Smooth Love Potion <span class="span">SLP/USD</span></a>
-                </div>
-                <data class="card-value"><h1><span id="slp">Loading..</span></h1></data>
-                <p class="percentage-change"><span id="slp-change"></span></p>
-            </div>
-        </li>
-		
-             
-    </ul>
- 
+                // Insertar precios en los elementos correspondientes
+                document.getElementById("ronin").textContent = `$${data.ronin.usd.toFixed(4)}`;
+                document.getElementById("pixel").textContent = `$${data.pixels.usd.toFixed(4)}`;
+                document.getElementById("axs").textContent = `$${data["axie-infinity"].usd.toFixed(4)}`;
+                document.getElementById("slp").textContent = `$${data["smooth-love-potion"].usd.toFixed(4)}`;
+            } catch (error) {
+                console.error("Error al obtener los precios:", error);
+            }
+        });
+    </script>
 </body>
+</html>
+
+
+</body>
+</html>
+
+
 </html>
  </div> </div> </div>
 <!DOCTYPE html>
@@ -830,7 +854,7 @@
 
   <!-- 
     - custom js link
-  --> <script src="./js/scripts.js"></script>
+  --> 
   <script src="./js/script.js" ></script>
 
   <!-- 
