@@ -37,13 +37,13 @@
         <ul class="navbar-list">
          
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Lands</a>
+            <a href="lands.html" class="navbar-link" data-nav-link>Lands</a>
           </li>
 		    <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Resources</a>
+            <a href="resources.html" class="navbar-link" data-nav-link>Resources</a>
           </li>
                     <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Sell Crypto</a>
+            <a href="#" class="navbar-link" data-nav-link>Level Calculator</a>
           </li>
           <li class="navbar-item">
             <a href="#" class="navbar-link" data-nav-link>Blog</a>
@@ -57,7 +57,7 @@
         <span class="line line-2"></span>
         <span class="line line-3"></span>
       </button>
-	   <a href="" >  <img src="./images/hero-banner.png" width="50" height="50"  ></a>
+	   <a href="" >  <img src="./images/ronin-logo.png" width="30" height="30"  ></a>
 
 
 
@@ -81,7 +81,7 @@
 <section class="section hero" aria-label="hero" data-section>
   <div class="container">
     <div class="hero-content">
-      <h3 class="h3 hero-title">Welcome to Pixels Tools</h3>
+      <h3 class="h3 hero-title">Welcome to Pixels </h3>
       <p class="hero-text">
        Pixels Tools is a tool that will make your favorite game easier for you
   </p>
@@ -118,6 +118,7 @@
         - #TREND
       -->
   <style>
+  
         .green { color: green; }
         .red { color: red; }
     </style>
@@ -169,18 +170,79 @@
                 <p class="percentage-change"><span id="slp-change"></span></p>
             </div>
         </li>
+		
              
     </ul>
  
 </body>
 </html>
  </div> </div> </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de División</title>
+    <style>
+        #container {
+            text-align: center; /* Centra todo el contenido */
+            margin-top: 50px;
+        }
+        #division-result {
+            font-size: 1.5em;
+            color: white;
+            display: flex; /* Usamos flexbox para alinear elementos en horizontal */
+            align-items: center; /* Alinea verticalmente los elementos */
+            justify-content: center; /* Centra horizontalmente los elementos */
+            gap: 10px; /* Espacio entre los elementos */
+        }
+        #division-result img {
+            width: 50px; /* Tamaño de las imágenes */
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h5 id="division-result">Cargando...</h5>
+    </div>
 
+    <script>
+        const tokenSymbol = 'pixels'; // Cambia esto al símbolo del token que quieras (ejemplo: ethereum, solana, etc.)
+        const usdAmount = 20; // Cantidad en USD
+        const totalToDivide = 4000000; // Valor a dividir (4 millones)
 
-      <!-- 
-        - #MARKET
-      -->
+        async function fetchTokenPrice() {
+            try {
+                const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${tokenSymbol}&vs_currencies=usd`);
+                if (!response.ok) {
+                    throw new Error('Error en la respuesta de la API');
+                }
+                const data = await response.json();
+                if (!data[tokenSymbol] || !data[tokenSymbol].usd) {
+                    throw new Error('No se encontró el precio del token');
+                }
 
+                const priceInUSD = data[tokenSymbol].usd;
+                const tokenAmount = usdAmount / priceInUSD;
+                const divisionResult = totalToDivide / tokenAmount;
+
+                // Mostrar el resultado con las imágenes
+                document.getElementById('division-result').innerHTML = `
+                    1 <img src="pixel_icon.webp" alt="Pixels">  = 
+                    ${divisionResult.toFixed(2)} 
+                    <img src="currency-coin.webp" alt="Coins">
+                `;
+            } catch (error) {
+                console.error('Error al obtener el precio:', error);
+                document.getElementById('division-result').textContent = 'Error al cargar el resultado.';
+            }
+        }
+
+        fetchTokenPrice();
+    </script>
+</body>
+</html>
     
                     <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
                       <ion-icon name="star-outline" aria-hidden="false" class="icon-outline"></ion-icon>
@@ -731,7 +793,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; 2024 Pixel Tools All Rights Reserved by <a href="#" class="copyright-link">Karmar14.ron</a>
+          &copy; 2025  <a href="#" class="copyright-link">Karmar14.ron</a>
         </p>
 
         <ul class="social-list">

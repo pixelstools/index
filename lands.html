@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Tools</title>
+
+    <script src="https:/code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./pixel_icon.webp" type="image/png+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+ </head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->  <header class="header" data-header>
+    <div class="header-full">
+      <a href="#" class="logo">
+        <img src="pixel_icon.webp" width="30" height="30" alt="pixel logo">  Pixels Tools
+      </a>
+<center>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+         
+          <li class="navbar-item">
+            <a href="lands.html" class="navbar-link" data-nav-link>Lands</a>
+          </li>
+		    <li class="navbar-item">
+            <a href="resources.html" class="navbar-link" data-nav-link>Resources</a>
+          </li>
+                    <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Level Calculator</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+          
+        </ul></center>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+	   <a href="" >  <img src="./images/ronin-logo.png" width="30" height="30"  ></a>
+
+
+
+  </header>
+
+  <!-- Aquí va el contenido de tu página -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #121212;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .sidebar h3 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #bbbbbb;
+        }
+
+        .sidebar .filter-item {
+            margin-bottom: 20px;
+        }
+
+        .sidebar label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .sidebar input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .filter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-list label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .filters-container {
+            background-color: #121212;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .filters {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .filters select,
+        .filters input {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .filters button {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .filters button:hover {
+            background-color: #444;
+        }
+
+        .items {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 320px; /* Mantener la altura de la tarjeta */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .item img {
+            width: 100%;
+            height: 150px; /* Reducir altura de imagen */
+            object-fit: cover;
+        }
+
+        .item-content {
+            padding: 10px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .item-content h4 {
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        .item-content .price {
+            font-size: 14px;
+            color: #00bcd4;
+        }
+
+        .buy-now {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .buy-now:hover {
+            background-color: #444;
+        }
+
+        /* Ajustes para que el iframe ocupe todo el espacio disponible */
+        .item iframe {
+            width: 100%;
+            height: calc(150% - 40px); /* Restar el espacio del botón */
+            border: none;
+            flex-grow: 1;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .filters-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .filters {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="filters-container">
+        <div class="filters">
+            <button>Filters</button>
+            <select>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+            <input type="text" placeholder="Search by name">
+        </div>
+        <button>Sweep</button>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Properties</h3>
+
+            <div class="filter-item">
+                <label for="coop">Coop</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="coopYes"> Yes</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="environment">Environment</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="space"> Space</label>
+                    <label><input type="checkbox" id="water"> Water</label>
+                    <label><input type="checkbox" id="land"> Land</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="house">House</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="largeHouse"> Large</label>
+                    <label><input type="checkbox" id="smallHouse"> Small</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="land">Land</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="standardLand"> Standard</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="silo">Silo</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="siloYes"> Yes</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="size">Size</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="largeHouse"> Large</label>
+                    <label><input type="checkbox" id="smallHouse"> Small</label>
+                </div>
+            </div>
+            <div class="filter-item">
+                <label for="treeDensity">Tree Density</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="dense"> Dense</label>
+                    <label><input type="checkbox" id="light"> Light</label>
+                </div>
+            </div>
+
+            <div class="filter-item">
+                <label for="windmill">Windmill</label>
+                <div class="filter-list">
+                    <label><input type="checkbox" id="windmillYes"> Yes</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="items">
+            <div class="item">
+                <img src="https://via.placeholder.com/250x160" alt="Land">
+                <div class="item-content">
+                    <h4>Farm Land #1136</h4>
+                    <p class="price">R 1.90K $1.96K</p>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content">
+                    <iframe src="https://play.pixels.xyz/pixels/share/2" title="Pixels Land"></iframe>
+                    <h4>Farm Land #3825</h4>
+                   <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+
+ 
+<br>
+      <!-- 
+        - #INSTRUCTION
+      -->
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">
+          &copy; 2024 Pixel Tools All Rights Reserved by <a href="#" class="copyright-link">Karmar14.ron</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+  
+ </div> </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  --> <script src="./js/scripts.js"></script>
+  <script src="./js/script.js" ></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  
+</body>
+
+</html>
