@@ -35,7 +35,7 @@
     - #HEADER
   -->  <header class="header" data-header>
     <div class="header-full">
-      <a href="index.html" class="logo">
+      <a href="#" class="logo">
         <img src="pixel_icon.webp" width="30" height="30" alt="pixel logo">  Pixels Tools
       </a>
 <center>
@@ -109,160 +109,189 @@
 
 </body>
 </html>
+<style>
 
 
 
 
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-text p {
+    margin: 10px 0;
+}
 
 
-    <div class="table-container">
-        <form id="farming-form">
-            <h3 class="h3 hero-title">Farming Calculator</h3>
-            <div class="form-container">
-                <div class="image-container">
-                    <img src="images/farm.gif" alt="farming Image">
-                </div>
-                <div class="form-inputs">
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="item-select">Farming Item:</label>
-                            <div class="input-container">
-                                <img src="images/item-placeholder.png" alt="Item Image" id="item-image">
-                                <select id="item-select" name="item-select" onchange="updateItemImage()">
-                                    <option value="Popberry" data-image="images/skill/farming/popberry.png">Popberry</option>
-                                    <option value="Grainbow" data-image="images/skill/farming/grainbow.png">Grainbow</option>
-                                    <option value="Blue Grumpkin" data-image="images/skill/farming/blue-grumpkin.png">Blue Grumpkin</option>
-                                    <option value="Watermint" data-image="images/skill/farming/watermint.png">Watermint</option>
-                                    <option value="Orange Grumpkin" data-image="images/skill/farming/orange-grumpkin.png">Orange Grumpkin</option>
-                                    <option value="Clover" data-image="images/skill/farming/clover.png">Clover</option>
-                                    <option value="Astracactus" data-image="images/skill/farming/astracactus.png">Astracactus</option>
-                                    <option value="Tato Fruit" data-image="images/skill/farming/tato-fruit.png">Tato Fruit</option>
-                                    <option value="Java Bean" data-image="images/skill/farming/java-bean.png">Java Berry</option>
-                                    <option value="Muckchuck" data-image="images/skill/farming/muckchuck.png">Muckchuck</option>
-                                    <option value="Napricot" data-image="images/skill/farming/napricot.png">Napricot</option>
-                                    <option value="Slothmato" data-image="images/skill/farming/slothmato.png">Slothmato</option>
-                                    <option value="Cubecumber" data-image="images/skill/farming/cubecumber.png">Cubecumber</option>
-                                    <option value="Scarrot" data-image="images/skill/farming/scarrot.png">Scarrot</option>
-                                    <option value="Butterberry" data-image="images/skill/farming/butterberry.png">Butterberry</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="quantity-input">Quantity Item:</label>
-                            <div class="input-container">
-                                <input type="number" id="quantity-input" name="quantity-input" min="1" required>
-                            </div>
+</style>
+<div class="table-container">
+    <form id="farming-form">
+        <h3 class="h3 hero-title">Farming Calculator</h3>
+        <div class="form-container">
+            <div class="image-container">
+                <img src="images/farm.gif" alt="farming Image">
+            </div>
+            <div class="form-inputs">
+                <div class="row">
+                    <div class="form-group">
+                        <label for="item-select">Farming Item:</label>
+                        <div class="input-container">
+                            <img src="images/item-placeholder.png" alt="Item Image" id="item-image">
+                            <select id="item-select" name="item-select" onchange="updateItemImage()" required>
+                                <option value="Popberry" data-image="images/skill/farming/popberry.png">Popberry</option>
+                                <option value="Grainbow" data-image="images/skill/farming/grainbow.png">Grainbow</option>
+                                <option value="Blue Grumpkin" data-image="images/skill/farming/blue-grumpkin.png">Blue Grumpkin</option>
+                                <option value="Watermint" data-image="images/skill/farming/watermint.png">Watermint</option>
+                                <option value="Orange Grumpkin" data-image="images/skill/farming/orange-grumpkin.png">Orange Grumpkin</option>
+                                <option value="Clover" data-image="images/skill/farming/clover.png">Clover</option>
+                                <option value="Astracactus" data-image="images/skill/farming/astracactus.png">Astracactus</option>
+                                <option value="Tato Fruit" data-image="images/skill/farming/tato-fruit.png">Tato Fruit</option>
+                                <option value="Java Bean" data-image="images/skill/farming/java-bean.png">Java Berry</option>
+                                <option value="Muckchuck" data-image="images/skill/farming/muckchuck.png">Muckchuck</option>
+                                <option value="Napricot" data-image="images/skill/farming/napricot.png">Napricot</option>
+                                <option value="Slothmato" data-image="images/skill/farming/slothmato.png">Slothmato</option>
+                                <option value="Cubecumber" data-image="images/skill/farming/cubecumber.png">Cubecumber</option>
+                                <option value="Scarrot" data-image="images/skill/farming/scarrot.png">Scarrot</option>
+                                <option value="Butterberry" data-image="images/skill/farming/butterberry.png">Butterberry</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="market-price-input">Market Price:</label>
-                            <div class="input-container">
-                                <input type="number" id="market-price-input" name="market-price-input" min="0" step="0.01" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="energy-cost-input">Market Energy:</label>
-                            <div class="input-container">
-                                <input type="number" id="energy-cost-input" name="energy-cost-input" min="0"  tep="0.01" required>
-                            </div>
+                    <div class="form-group">
+                        <label for="quantity-input">Quantity Item:</label>
+                        <div class="input-container">
+                            <input type="number" id="quantity-input" name="quantity-input" min="1" required>
                         </div>
                     </div>
                 </div>
-            </div>   
-            <center>
-                <button type="button" class="btn-primary" onclick="calculate()">Calcular</button>
-            </center>
-        </form>
-    </div>
-
-    <div id="result-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <div class="results-container">
-                <img src="images/77_good_luck.png" width="200" height="200"  class="results-image">
-                <div class="results-text">
-                    <p id="xp-result-modal"></p>
-                    <p id="energy-result-modal"></p>
-                    <p id="profit-result-modal"></p>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="market-price-input">Market Price:</label>
+                        <div class="input-container">
+                            <input type="number" id="market-price-input" name="market-price-input" min="0" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="energy-cost-input">Market Energy:</label>
+                        <div class="input-container">
+                            <input type="number" id="energy-cost-input" name="energy-cost-input" min="0" step="0.01" required>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <center>
+            <button type="button" class="btn-primary" onclick="calculate()" disabled>Calcular</button>
+        </center>
+    </form>
+</div>
+
+<div id="result-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div class="results-container">
+            <div class="results-text">
+                <p id="xp-result-modal"></p>
+                <p id="energy-result-modal"></p>
+                <p id="profit-result-modal"></p>
+            </div>
+        </div>
     </div>
-    <script>
-        function updateItemImage() {
-            const select = document.getElementById("item-select");
-            const selectedOption = select.options[select.selectedIndex];
-            const imageSrc = selectedOption.getAttribute("data-image");
-            document.getElementById("item-image").src = imageSrc;
+</div>
+
+<script>
+    // Función para actualizar la imagen del item seleccionado
+    function updateItemImage() {
+        const select = document.getElementById("item-select");
+        const selectedOption = select.options[select.selectedIndex];
+        const imageSrc = selectedOption.getAttribute("data-image");
+        document.getElementById("item-image").src = imageSrc;
+    }
+
+    // Datos de los items
+    const data = {
+        "Popberry": {"XP": 8, "Energy": 1.5, "SeedCost": 1},
+        "Grainbow": {"XP": 18, "Energy": 3, "SeedCost": 2},
+        "Blue Grumpkin": {"XP": 27, "Energy": 3, "SeedCost": 3},
+        "Watermint": {"XP": 33, "Energy": 3.5, "SeedCost": 15},
+        "Orange Grumpkin": {"XP": 29, "Energy": 3, "SeedCost": 4},
+        "Clover": {"XP": 33, "Energy": 5, "SeedCost": 8},
+        "Astracactus": {"XP": 42, "Energy": 4, "SeedCost": 20},
+        "Tato Fruit": {"XP": 35, "Energy": 5, "SeedCost": 10},
+        "Java Berry": {"XP": 51, "Energy": 3.5, "SeedCost": 12},
+        "Muckchuck": {"XP": 59, "Energy": 4, "SeedCost": 14},
+        "Napricot": {"XP": 79, "Energy": 4.5, "SeedCost": 16},
+        "Slothmato": {"XP": 88, "Energy": 5, "SeedCost": 20},
+        "Cubecumber": {"XP": 108, "Energy": 5.5, "SeedCost": 24},
+        "Scarrot": {"XP": 137, "Energy": 7.5, "SeedCost": 60},
+        "Butterberry": {"XP": 174, "Energy": 8.5, "SeedCost": 80},
+    };
+
+    // Función para calcular los resultados
+    function calculate() {
+        const itemSelect = document.getElementById("item-select").value;
+        const quantity = parseInt(document.getElementById("quantity-input").value);
+        const marketPrice = parseFloat(document.getElementById("market-price-input").value);
+        const energyCost = parseFloat(document.getElementById("energy-cost-input").value);
+
+        const xpUnit = data[itemSelect].XP;
+        const energyUnit = data[itemSelect].Energy;
+        const seedCost = data[itemSelect].SeedCost;
+
+        const xpTotal = xpUnit * quantity;
+        const energyTotal = energyUnit * quantity;
+        const totalRevenue = marketPrice * quantity;
+        const totalEnergyCost = energyTotal * energyCost;
+        const totalSeedCost = seedCost * quantity;
+        const totalProfit = totalRevenue - totalEnergyCost - totalSeedCost;
+
+        // Actualiza el contenido del modal con los resultados
+        document.getElementById("xp-result-modal").innerHTML = `<img src="images/exp.png" width="50" height="50"> XP total: ${xpTotal}`;
+        document.getElementById("energy-result-modal").innerHTML = `<img src="images/energy.png" width="30" height="30"> Energía total: ${energyTotal.toFixed(2)}<br>`;
+        document.getElementById("profit-result-modal").innerHTML = `<img src="images/currency-coin.webp" width="30" height="30"> Ganancia total: ${totalProfit.toFixed(2)}`;
+
+        // Muestra el modal
+        showModal();
+    }
+
+    // Función para mostrar el modal
+    function showModal() {
+        const modal = document.getElementById("result-modal");
+        modal.style.display = "block";
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        const modal = document.getElementById("result-modal");
+        modal.style.display = "none";
+    }
+
+    // Cierra el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+        const modal = document.getElementById("result-modal");
+        if (event.target == modal) {
+            closeModal();
         }
+    }
 
-        const data = {
-            "Popberry": {"XP": 5, "Energy": 1.5, "SeedCost": 1},
-            "Grainbow": {"XP": 6, "Energy": 1.5, "SeedCost": 2},
-            "Blue Grumpkin": {"XP": 4, "Energy": 2.5, "SeedCost": 3},
-            "Watermint": {"XP": 14, "Energy": 13.5, "SeedCost": 24},
-            "Orange Grumpkin": {"XP": 8, "Energy": 1.5, "SeedCost": 4},
-            "Clover": {"XP": 15, "Energy": 2.5, "SeedCost": 8},
-            "Astracactus": {"XP": 20, "Energy": 40.5, "SeedCost": 33},
-            "Tato Fruit": {"XP": 35, "Energy": 5, "SeedCost": 10},
-            "Java Berry": {"XP": 21, "Energy": 2.5, "SeedCost": 12},
-            "Muckchuck": {"XP": 24, "Energy": 2.5, "SeedCost": 14},
-            "Napricot": {"XP": 30, "Energy": 2.5, "SeedCost": 16},
-            "Slothmato": {"XP": 40, "Energy": 2.5, "SeedCost": 20},
-            "Cubecumber": {"XP": 108, "Energy": 5.5, "SeedCost": 24},
-            "Scarrot": {"XP": 80, "Energy": 8.5, "SeedCost": 60},
-            "Butterberry": {"XP": 150, "Energy": 2.5, "SeedCost": 80},
-        };
+    // Función para habilitar el botón de calcular solo si todos los campos están llenos
+    document.getElementById('farming-form').addEventListener('input', function() {
+        const quantity = document.getElementById('quantity-input').value;
+        const marketPrice = document.getElementById('market-price-input').value;
+        const energyCost = document.getElementById('energy-cost-input').value;
 
-        function calculate() {
-            const itemSelect = document.getElementById("item-select").value;
-            const quantity = parseInt(document.getElementById("quantity-input").value);
-            const marketPrice = parseFloat(document.getElementById("market-price-input").value);
-            const energyCost = parseFloat(document.getElementById("energy-cost-input").value);
-            
-            const xpUnit = data[itemSelect].XP;
-            const energyUnit = data[itemSelect].Energy;
-            const seedCost = data[itemSelect].SeedCost;
-            
-            const xpTotal = xpUnit * quantity;
-            const energyTotal = energyUnit * quantity;
-            const totalRevenue = marketPrice * quantity;
-            const totalEnergyCost = energyTotal * energyCost;
-            const totalSeedCost = seedCost * quantity;
-            const totalProfit = totalRevenue - totalEnergyCost - totalSeedCost;
-            
-            // Actualiza el contenido del modal con los resultados
-            document.getElementById("xp-result-modal").innerHTML = `<img src="images/exp.png" width="50" height="50"> XP total: ${xpTotal}`;
-            document.getElementById("energy-result-modal").innerHTML = `<img src="images/energy.png" width="25" height="25"> Energía total: ${energyTotal.toFixed(2)}`;
-            document.getElementById("profit-result-modal").innerHTML = `<img src="images/currency-coin.webp" width="25" height="25"> Ganancia total: ${totalProfit.toFixed(2)} coins`;
-            
-            // Muestra el modal
-            showModal();
-        }
+        // Verifica si todos los campos están llenos
+        const allFieldsFilled = quantity && marketPrice && energyCost;
 
-        function showModal() {
-            const modal = document.getElementById("result-modal");
-            modal.style.display = "block";
-        }
+        // Si todos los campos están llenos, habilita el botón; de lo contrario, deshabilítalo
+        document.querySelector('button[type="button"]').disabled = !allFieldsFilled;
+    });
 
-        function closeModal() {
-            const modal = document.getElementById("result-modal");
-            modal.style.display = "none";
-        }
+    // Inicializa la imagen del ítem cuando se carga la página
+    document.addEventListener("DOMContentLoaded", updateItemImage);
+</script>
 
-        // Cierra el modal si el usuario hace clic fuera de él
-        window.onclick = function(event) {
-            const modal = document.getElementById("result-modal");
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Inicializa la imagen del ítem cuando se carga la página
-        document.addEventListener("DOMContentLoaded", updateItemImage);
-    </script>
-</body>
 
 
 
@@ -700,7 +729,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; 2024 Pixel Tools  <a href="#" class="copyright-link"></a>
+          &copy; 2024  <a href="https://x.com/charly23oficial" class="copyright-link">Karmar14.ron </a>
         </p>
 
         <ul class="social-list">
