@@ -67,305 +67,115 @@
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #0d0d0d;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
 
-        .container {
-            padding: 20px;
-            display: flex;
-            gap: 20px;
-        }
 
-        .sidebar {
-            width: 220px;
-            background-color: #121212;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-        }
 
-        .sidebar h3 {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: #bbbbbb;
-        }
 
-        .sidebar .filter-item {
-            margin-bottom: 20px;
-        }
+  <main>
+    <article>
 
-        .sidebar label {
-            display: block;
-            font-size: 12px;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
+      <!-- 
+        - #HERO
+      -->
 
-        .sidebar input[type="checkbox"] {
-            margin-right: 10px;
-        }
-
-        .filter-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .filter-list label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            color: #ffffff;
-        }
-
-        .filters-container {
-            background-color: #121212;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #333;
-        }
-
-        .filters {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .filters select,
-        .filters input {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .filters button {
-            background-color: #333;
-            border: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .filters button:hover {
-            background-color: #444;
-        }
-
-        .items {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .item {
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 320px; /* Mantener la altura de la tarjeta */
-            display: flex;
-            flex-direction: column;
-        }
-
-        .item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
-        }
-
-        .item img {
-            width: 100%;
-            height: 150px; /* Reducir altura de imagen */
-            object-fit: cover;
-        }
-
-        .item-content {
-            padding: 10px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .item-content h4 {
-            font-size: 16px;
-            margin: 0 0 8px;
-        }
-
-        .item-content .price {
-            font-size: 14px;
-            color: #00bcd4;
-        }
-
-        .buy-now {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #333;
-            color: white;
-            padding: 8px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-
-        .buy-now:hover {
-            background-color: #444;
-        }
-
-        /* Ajustes para que el iframe ocupe todo el espacio disponible */
-        .item iframe {
-            width: 100%;
-            height: calc(150% - 40px); /* Restar el espacio del botón */
-            border: none;
-            flex-grow: 1;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .filters-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .filters {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .sidebar {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="filters-container">
-        <div class="filters">
-            <button>Filters</button>
-            <select>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-            </select>
-            <input type="text" placeholder="Search by name">
-        </div>
-        <button>Sweep</button>
+<section class="section hero" aria-label="hero" data-section>
+  <div class="container">
+    <div class="hero-content">
+      <h3 class="h3 hero-title">Welcome to Pixels </h3>
+      <p class="hero-text">
+       Pixels Tools is a tool that will make your favorite game easier for you
+  </p>
+    
     </div>
+	
+      <!-- Agregar imágenes de escritorio detrás del texto -->
+      <img src="./images/axie_infinity.webp" alt="imagen1" class="hero-img img1">
+      <img src="./images/SLP.webp" alt="imagen2" class="hero-img img2">
+      <img src="./images/glass-3.png" alt="imagen3" class="hero-img img3">
+      <img src="./images/pixel.webp" alt="imagen4" class="hero-img img4">
+    
+    <!-- Mostrar el banner hero solo en dispositivos de escritorio -->
+    <figure class="hero-banner">
+      <img src="./images/hero-banner.png" width="570" height="448" alt="hero banner" class="w-100">
+    </figure>
 
-    <div class="container">
-        <aside class="sidebar">
-            <h3>Properties</h3>
+    <!-- Agregar imágenes móviles -->
+    <img src="./images/axie_infinity.webp" alt="mobile-image1" class="img-mobile img1-mobile">
+    <img src="./images/SLP.webp" alt="mobile-image2" class="img-mobile img3-mobile">
+    <img src="./images/glass-3.png" alt="mobile-image3" class="img-mobile img2-mobile">
+    <img src="./images/pixel.webp" alt="mobile-image4" class="img-mobile img4-mobile">
+  </div>
+</section>
 
-            <div class="filter-item">
-                <label for="coop">Coop</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="coopYes"> Yes</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="environment">Environment</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="space"> Space</label>
-                    <label><input type="checkbox" id="water"> Water</label>
-                    <label><input type="checkbox" id="land"> Land</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="house">House</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="largeHouse"> Large</label>
-                    <label><input type="checkbox" id="smallHouse"> Small</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="land">Land</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="standardLand"> Standard</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="silo">Silo</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="siloYes"> Yes</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="size">Size</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="largeHouse"> Large</label>
-                    <label><input type="checkbox" id="smallHouse"> Small</label>
-                </div>
-            </div>
-            <div class="filter-item">
-                <label for="treeDensity">Tree Density</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="dense"> Dense</label>
-                    <label><input type="checkbox" id="light"> Light</label>
-                </div>
-            </div>
-
-            <div class="filter-item">
-                <label for="windmill">Windmill</label>
-                <div class="filter-list">
-                    <label><input type="checkbox" id="windmillYes"> Yes</label>
-                </div>
-            </div>
-        </aside>
-
-        <main class="items">
-            <div class="item">
-                <img src="https://via.placeholder.com/250x160" alt="Land">
-                <div class="item-content">
-                    <h4>Farm Land #1136</h4>
-                    <p class="price">R 1.90K $1.96K</p>
-                    <a href="#" class="buy-now">Buy Now</a>
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-content">
-                    <iframe src="https://play.pixels.xyz/pixels/share/2" title="Pixels Land"></iframe>
-                    <h4>Farm Land #3825</h4>
-                   <a href="#" class="buy-now">Buy Now</a>
-                </div>
-            </div>
-        </main>
-    </div>
 </body>
 </html>
 
 
- 
-<br>
+
+
+
+      <!-- 
+        - #TREND
+      -->
+
+    
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="false" class="icon-outline"></ion-icon>
+                      <ion-icon name="star" aria-hidden="false" class="icon-fill"></ion-icon>
+                    </button>
+                  </td>
+
+                  
+             
+
+                 
+                    <button class="add-to-fav" aria-label="Add to favourite" data-add-to-fav>
+                      <ion-icon name="star-outline" aria-hidden="true" class="icon-outline"></ion-icon>
+    
+                  <ion-icon name="star" aria-hidden="true" class="icon-fill"></ion-icon>
+                    </button>
+					
+					  <br>
+
+
+
+
+<style>
+    .table-container {
+        max-width: 92%;
+        background-color: hsl(228, 9%, 10%);
+        padding: 20px;
+        border: 1px solid var(--raisin-black);
+        border-radius: 24px;
+        overflow-x: auto;
+        margin: 50px auto; /* Centrar y dar espacio arriba */
+        text-align: center; /* Centra todo el contenido */
+    }
+
+    .table-container img {
+        width: 200px; /* Ajusta el tamaño de la imagen */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .coming-soon-text {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: white;
+    }
+</style>
+
+<div class="table-container">
+    <img src="./images/work.png" alt="Under Construction">
+    <div class="coming-soon-text">Coming Soon</div>
+    
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</div>
+
       <!-- 
         - #INSTRUCTION
       -->
@@ -373,7 +183,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; 2024 Pixel Tools All Rights Reserved by <a href="#" class="copyright-link">Karmar14.ron</a>
+          &copy; 2025  <a href="#" class="copyright-link">Karmar14.ron</a>
         </p>
 
         <ul class="social-list">
@@ -410,7 +220,7 @@
 
   <!-- 
     - custom js link
-  --> <script src="./js/scripts.js"></script>
+  --> 
   <script src="./js/script.js" ></script>
 
   <!-- 
